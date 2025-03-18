@@ -1,4 +1,4 @@
-import styles from './cards.module.css';
+import styles from './card.module.css';
 
 const Card = ({capa, textoAlt, titulo, ano, detalhes}) => {
     return(

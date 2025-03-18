@@ -1,31 +1,21 @@
 import React from "react";
 import styles from "./titulos.module.css";
 import Header from "../components/header";
+import Footer from "../components/footer";
+import Card from "../components/cards";
 
-const CorinthiansTrophiesPage = () => {
+export default function CorinthiansTrophiesPage() {
   return (
     <div className={styles.container}>
-     
-    <Header />
+
+      <Header />
 
       <main className={styles.main}>
         <section className={styles.featured}>
           <h2>Conquistas Principais</h2>
           <div className={styles.featuredTrophies}>
-            <div className={styles.trophy}>
-              <div className={styles.trophyCover}>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/FIFA_CLUB_WORLDCUP.jpg/450px-FIFA_CLUB_WORLDCUP.jpg"
-                  alt="Troféu do Mundial de Clubes da FIFA 2012"
-                />
-              </div>
-              <div className={styles.trophyInfo}>
-                <h3>Mundial de Clubes da FIFA</h3>
-                <p className={styles.year}>2012</p>
-                <p className={styles.details}>Corinthians 1 x 0 Chelsea</p>
-                <button className={styles.detailsButton}>Ver Detalhes</button>
-              </div>
-            </div>
+            
+        <Card ano={2012} capa={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/FIFA_CLUB_WORLDCUP.jpg/450px-FIFA_CLUB_WORLDCUP.jpg"} detalhes={"Corinthians 1x0 Chelsea"} textoAlt={"Troféu da Copa Libertadores da América 2012"} titulo={"Copa Libertadores da América"} />
             <div className={styles.trophy}>
               <div className={styles.trophyCover}>
                 <img
@@ -216,39 +206,7 @@ const CorinthiansTrophiesPage = () => {
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.footerSection}>
-            <h3>Sobre o Sport Club Corinthians Paulista</h3>
-            <p>
-              Fundado em 1910, o Corinthians é um dos clubes mais populares e
-              vitoriosos do futebol brasileiro, com milhões de torcedores ao
-              redor do mundo.
-            </p>
-          </div>
-          <div className={styles.footerSection}>
-            <h3>Contato</h3>
-            <p>Email: contato@corinthians.com.br</p>
-            <p>Telefone: (11) 2095-3000</p>
-          </div>
-          <div className={styles.footerSection}>
-            <h3>Siga-nos</h3>
-            <div className={styles.socialLinks}>
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">Twitter</a>
-            </div>
-          </div>
-        </div>
-        <div className={styles.copyright}>
-          <p>
-            &copy; 2025 Sport Club Corinthians Paulista. Todos os direitos
-            reservados.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
-
-export default CorinthiansTrophiesPage;
